@@ -28,7 +28,7 @@
         {{ greeting }}
         <input @keyup.enter="greet(greeting + '!!!!')" v-model="greeting" />
         <hr>
-        <button @click="toggleBox">Toggle Box</button>
+        <button @click.prevent.stop="toggleBox">Toggle Box</button>
         <div v-if="isVisible" class="box"></div>
     </div>
 
